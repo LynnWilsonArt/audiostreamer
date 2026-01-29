@@ -1,0 +1,41 @@
+{
+  "cli": {
+    "version": ">= 2.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "autoIncrement": true,
+      "distribution": "store"
+    },
+    "closedTest": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "autoIncrement": true,
+      "distribution": "store"
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "track": "production"
+      }
+    },
+    "closedTest": {
+      "android": {
+        "track": "alpha"
+      }
+    }
+  }
+}
